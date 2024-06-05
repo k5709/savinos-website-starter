@@ -30,11 +30,6 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/order" style={linkStyle}>
-              Order Now
-            </Link>
-          </li>
-          <li>
             <Link to="/about" style={linkStyle}>
               About Us
             </Link>
@@ -44,6 +39,11 @@ const Header = () => {
               Contact
             </Link>
           </li>
+          <li>
+            <Link to="/order" style={linkStyle}>
+              Order Now
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -51,12 +51,12 @@ const Header = () => {
 };
 
 const headerStyle = {
-  background: "#333",
+  background: "white",
   color: "#fff",
-  padding: "10px",
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-evenly",
+  justifyContent: "center",
+  boxShadow: "0 2px 4px rgb(135, 206, 235)",
 };
 
 const logoStyle = {
@@ -66,14 +66,13 @@ const logoStyle = {
 };
 
 const logoImgStyle = {
-  width: "215px",
-  height: "200px",
+  width: "220px",
   borderRadius: "50%",
-  marginLeft: "-5%",
 };
 
 const navStyle = {
   display: "flex",
+  paddingLeft: "75px",
 };
 
 const ulStyle = {
@@ -85,10 +84,19 @@ const ulStyle = {
 };
 
 const linkStyle = {
-  color: "#fff",
+  color: "black",
   textDecoration: "none",
-  padding: "20px",
+  padding: "30px",
   fontSize: "1.3em",
+  transition: "color 0.3s ease",
+};
+
+linkStyle[":hover"] = {
+  color: "green", // Darker shade of gray
+  textDecoration: "underline",
+  backgroundColor: "#f0f0f0", // Light gray background
+  border: "1px solid #ccc", // Light gray border
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Subtle box shadow
 };
 
 export default Header;
